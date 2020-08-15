@@ -57,8 +57,9 @@ nav {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  height: calc(38.4px + 3vw);
-  max-height: 96px;
+  /* height: calc(38.4px + 3vw); */
+  /* max-height: 96px; */
+  height: 64px;
   background: rgba(228, 229, 221, 0.75);
   bottom: 0;
   backdrop-filter: blur(6px);
