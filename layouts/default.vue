@@ -38,7 +38,7 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 400;
 }
 

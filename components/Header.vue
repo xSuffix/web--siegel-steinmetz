@@ -51,6 +51,8 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
+  background: #fff;
 }
 
 nav {
@@ -88,6 +90,10 @@ a {
 }
 
 @media (min-width: 600px) {
+header {
+  position: fixed;
+}
+
   nav {
     position: initial;
     height: 64px;
