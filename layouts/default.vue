@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="$route.name">
     <Header />
     <Nuxt />
   </div>

@@ -33,15 +33,13 @@ export default {
 span {
   font-weight: 400;
   color: var(--color-font--light);
-  font-size: 25px;
-  line-height: 34px;
   text-decoration: none;
 }
 
-@media screen and (max-width: 1920px) {
+@media (min-width: 600px) {
   span {
-    font-size: calc(0.8vw + 10px);
-    line-height: calc(1.2vw + 12px);
+    font-size: 20px;
+    line-height: 25px;
   }
 }
 </style>
