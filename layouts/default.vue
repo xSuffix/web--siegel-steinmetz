@@ -1,5 +1,5 @@
 <template>
-  <div :class="$route.name">
+  <div>
     <Header />
     <Nuxt />
   </div>
@@ -17,13 +17,13 @@ export default {
 
 <style>
 html {
-  font-family: Roboto, Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 
   --color-primary: #770019;
-  --color-font--light: #363537;
+  --color-font--light: #2C4251;
 }
 
 body {
@@ -31,4 +31,20 @@ body {
   color: var(--color-font--light);
 }
 
+.container {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
 </style>

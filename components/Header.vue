@@ -1,13 +1,6 @@
 <template>
-  <header>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>Herzlich Willkommen!</h1>
-        <p>Wir bieten einen umfassenden Service rund um den Naturstoff Stein:<br>Die Pflege und Restauration von Gebäuden, Sandsteinfassaden, Fenstern, Treppen, Geländern, Ornamentent, Denkmälern und Grabsteinen.</p>
-      </div>
-      <div class="hero-image" v-if="$route.name == 'index'" />
-    </div>
-    <nav>
+  <header >
+    <nav class="container">
       <nuxt-link to="/">
         <Logo />
       </nuxt-link>
@@ -58,26 +51,6 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
-  max-width: 1248px;
-  margin: 0 auto;
-}
-
-.hero-image {
-  background: url("../assets/banner.jpg") center 35% no-repeat;
-  background-size: cover;
-  height: 50vw;
-  width: 100%;
-  order: 2;
-}
-
-.welcome {
-  display: flex;
-  flex-direction: column;
-  order: 1;
-}
-
-.welcome-text {
-  order: 3;
 }
 
 nav {
@@ -89,7 +62,7 @@ nav {
   background: rgba(228, 229, 221, 0.75);
   top: calc(50vw - 48px);
   backdrop-filter: blur(6px);
-  padding: 0 4%;
+  padding: 0 16px;
   box-sizing: border-box;
   user-select: none;
 }
@@ -100,7 +73,7 @@ ul {
 
 .page-link {
   color: var(--color-font--light);
-  font-weight: 600;
+  font-weight: 500;
   padding: 16px 24px;
   align-self: center;
   border-radius: 4px;
@@ -118,31 +91,15 @@ a {
   nav {
     position: initial;
     height: 64px;
-    padding: 24px 0;
+    margin: 24px auto;
     box-sizing: content-box;
     background: transparent;
     backdrop-filter: none;
+    width: calc(100% - 32px);
   }
 
   ul {
     display: flex;
-  }
-
-  .hero-image {
-    order: 1;
-    height: 256px;
-    border-radius: 4px;
-  }
-
-  .welcome {
-    justify-content: space-between;
-    padding: 96px 0;
-    flex-direction: row-reverse;
-    order: 3;
-  }
-
-  .welcome > * {
-    width: 42%;    
-  }
+  }  
 }
 </style>
