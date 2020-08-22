@@ -1,45 +1,139 @@
 <template>
   <main>
-    <div class="shadow">
-      <div class="welcome container">
+    <section>
+      <div class="welcome container panel">
         <div class="leading">
           <h1>Herzlich Willkommen!</h1>
           <p>
-            Wir bieten einen umfassenden Service rund um den Naturstoff
-            Stein:<br />Die Pflege und Restauration von Gebäuden,
-            Sandsteinfassaden, Fenstern, Treppen, Geländern, Ornamentent,
-            Denkmälern und Grabsteinen.
+            Wir bieten einen umfassenden Service rund um den Naturstoff Stein:
+            <br />Die Pflege und Restauration von Gebäuden, Sandsteinfassaden,
+            Fenstern, Treppen, Geländern, Ornamentent, Denkmälern und
+            Grabsteinen.
+            <br />
+            <br />
+            <b>
+              Zum Grabmalkatalog:
+              <a
+                href="https://www.graef-granit.de/content/produkte"
+                target="_blank"
+              >Gräf GmbH</a>
+            </b>
           </p>
         </div>
         <div class="hero-image" v-if="$route.name == 'index'" />
       </div>
-    </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 720 32">
+        <path
+          fill="#fff"
+          d="M0 25.576c89.5 6.3147 201.941 10.18 338.75.8675 220.639-15.0187 381.25 0 381.25 0V0H0v25.576z"
+        />
+      </svg>
+    </section>
+    <section>
+      <div class="offer container">
+        <h2>Unser Angebot</h2>
+        <p>Eine kleine Übersicht unserer bisherigen Leistungen finden Sie hier.</p>
+        <card-offer v-bind="grabmallager" style="margin-top: 32px;" />
+        <card-offer v-bind="grabmalreferenzen" />
+        <card-offer v-bind="restaurierungen" />
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
-export default {};
+import CardOffer from "@/components/CardOffer.vue";
+// fill-opacity="0.2"
+export default {
+  data() {
+    return {
+      grabmallager: {
+        title: "Grabmallager",
+        text: "Ein sichtbares und individuelles Andenken an einen geliebten Menschen.",
+        buttons: [
+          {
+            text: "Galerie",
+            url: "#",
+            class: "primary"
+          },
+          {
+            text: "Weiterlesen",
+            url: "#",
+            class: ""
+          }
+        ],
+        image: require("@/assets/grabmallager.jpg")
+      },
+      grabmalreferenzen: {
+        title: "Grabmalreferenzen",
+        text: "Wir erarbeiten mit Ihnen gemeinsam die ganz persönliche Erinnerung an Ihren verstorbenen Verwandten.",
+        buttons: [
+          {
+            text: "Galerie",
+            url: "#",
+            class: "primary"
+          },
+          {
+            text: "Weiterlesen",
+            url: "#",
+            class: ""
+          }
+        ],
+        image: require("@/assets/grabmalreferenzen.jpg")
+      },
+      restaurierungen: {
+        title: "Restaurierungen",
+        text: "Ein Schwerpunkt unserer Arbeit ist die komplette und fachgemäße Restaurierung historischer Gebäude, Baudenkmale und Bildhauerarbeiten.",
+        buttons: [
+          {
+            text: "Galerie",
+            url: "#",
+            class: "primary"
+          },
+          {
+            text: "Weiterlesen",
+            url: "#",
+            class: ""
+          }
+        ],
+        image: require("@/assets/restaurierungen.jpg")
+      }
+    }
+  },
+  components: {
+    CardOffer
+  }
+};
 </script>
 
 <style scoped>
 main {
- background: #d9d9da34
+  background: #f7f7f8;
 }
 
-.shadow {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.11);
+.panel {
+  background: #d9d9da33;
   background: #fff;
+}
+
+section {
 }
 
 .welcome {
   display: flex;
   flex-direction: column;
-  
 }
 
 .leading {
   order: 2;
   line-height: 1.625;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 1rem 0;
 }
 
 .hero-image {
@@ -69,6 +163,10 @@ main {
     height: 256px;
     border-radius: 4px;
     max-width: 42%;
+  }
+
+  .shadow {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.11);
   }
 
   .welcome {

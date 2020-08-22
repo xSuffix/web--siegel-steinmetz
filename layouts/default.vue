@@ -31,15 +31,20 @@ body {
   color: var(--color-font--light);
 }
 
-.container {
-  max-width: 1248px;
-  margin: 0 auto;
-  padding: 0 16px;
+a {
+  color: #1976D2;
+  text-decoration: none;
 }
 
 h1 {
   font-size: 2.25rem;
   font-weight: 400;
+}
+
+.container {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 @media (max-width: 1280px) {
