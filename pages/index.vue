@@ -1,26 +1,28 @@
 <template>
   <main>
     <section>
-      <div class="welcome container panel">
-        <div class="leading">
-          <h1>Herzlich Willkommen!</h1>
-          <p>
-            Wir bieten einen umfassenden Service rund um den Naturstoff Stein:
-            <br />Die Pflege und Restauration von Gebäuden, Sandsteinfassaden,
-            Fenstern, Treppen, Geländern, Ornamentent, Denkmälern und
-            Grabsteinen.
-            <br />
-            <br />
-            <b>
-              Zum Grabmalkatalog:
-              <a
-                href="https://www.graef-granit.de/content/produkte"
-                target="_blank"
-              >Gräf GmbH</a>
-            </b>
-          </p>
+      <div class="panel">
+        <div class="welcome container">
+          <div class="leading">
+            <h1>Herzlich Willkommen!</h1>
+            <p>
+              Wir bieten einen umfassenden Service rund um den Naturstoff Stein:
+              <br />Die Pflege und Restauration von Gebäuden, Sandsteinfassaden,
+              Fenstern, Treppen, Geländern, Ornamentent, Denkmälern und
+              Grabsteinen.
+              <br />
+              <br />
+              <b>
+                Zum Grabmalkatalog:
+                <a
+                  href="https://www.graef-granit.de/content/produkte"
+                  target="_blank"
+                >Gräf GmbH</a>
+              </b>
+            </p>
+          </div>
+          <div class="hero-image" v-if="$route.name == 'index'" />
         </div>
-        <div class="hero-image" v-if="$route.name == 'index'" />
       </div>
 
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 720 32">
@@ -34,7 +36,7 @@
       <div class="offer container">
         <h2>Unser Angebot</h2>
         <p>Eine kleine Übersicht unserer bisherigen Leistungen finden Sie hier.</p>
-        <card-offer v-bind="grabmallager" style="margin-top: 32px;" />
+        <card-offer v-bind="grabmallager" />
         <card-offer v-bind="grabmalreferenzen" />
         <card-offer v-bind="restaurierungen" />
       </div>
@@ -50,60 +52,63 @@ export default {
     return {
       grabmallager: {
         title: "Grabmallager",
-        text: "Ein sichtbares und individuelles Andenken an einen geliebten Menschen.",
+        text:
+          "Ein sichtbares und individuelles Andenken an einen geliebten Menschen.",
         buttons: [
           {
             text: "Galerie",
             url: "#",
-            class: "primary"
+            class: "primary",
           },
           {
             text: "Weiterlesen",
             url: "#",
-            class: ""
-          }
+            class: "",
+          },
         ],
-        image: require("@/assets/grabmallager.jpg")
+        image: require("@/assets/grabmallager.jpg"),
       },
       grabmalreferenzen: {
         title: "Grabmalreferenzen",
-        text: "Wir erarbeiten mit Ihnen gemeinsam die ganz persönliche Erinnerung an Ihren verstorbenen Verwandten.",
+        text:
+          "Wir erarbeiten mit Ihnen gemeinsam die ganz persönliche Erinnerung an Ihren verstorbenen Verwandten.",
         buttons: [
           {
             text: "Galerie",
             url: "#",
-            class: "primary"
+            class: "primary",
           },
           {
             text: "Weiterlesen",
             url: "#",
-            class: ""
-          }
+            class: "",
+          },
         ],
-        image: require("@/assets/grabmalreferenzen.jpg")
+        image: require("@/assets/grabmalreferenzen.jpg"),
       },
       restaurierungen: {
         title: "Restaurierungen",
-        text: "Ein Schwerpunkt unserer Arbeit ist die komplette und fachgemäße Restaurierung historischer Gebäude, Baudenkmale und Bildhauerarbeiten.",
+        text:
+          "Ein Schwerpunkt unserer Arbeit ist die komplette und fachgemäße Restaurierung historischer Gebäude, Baudenkmale und Bildhauerarbeiten.",
         buttons: [
           {
             text: "Galerie",
             url: "#",
-            class: "primary"
+            class: "primary",
           },
           {
             text: "Weiterlesen",
             url: "#",
-            class: ""
-          }
+            class: "",
+          },
         ],
-        image: require("@/assets/restaurierungen.jpg")
-      }
-    }
+        image: require("@/assets/restaurierungen.jpg"),
+      },
+    };
   },
   components: {
-    CardOffer
-  }
+    CardOffer,
+  },
 };
 </script>
 
@@ -117,9 +122,6 @@ main {
   background: #fff;
 }
 
-section {
-}
-
 .welcome {
   display: flex;
   flex-direction: column;
@@ -131,16 +133,22 @@ section {
 }
 
 h1 {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: 600;
   margin: 1rem 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .hero-image {
   background: url("../assets/banner.jpg") center 35% no-repeat;
   background-size: cover;
-  height: 50vw;
+  height: 48vw;
   width: 100%;
+  background-position-y: 100%;
 }
 
 @media (max-width: 599px) {

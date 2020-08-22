@@ -62,7 +62,7 @@ nav {
   justify-content: space-between;
   height: 48px;
   background: rgba(228, 229, 221, 0.75);
-  top: calc(50vw - 48px);
+  top: calc(48vw - 48px);
   backdrop-filter: blur(6px);
   padding: 0 16px;
   box-sizing: border-box;

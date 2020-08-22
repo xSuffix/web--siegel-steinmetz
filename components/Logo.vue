@@ -26,7 +26,7 @@ export default {
 }
 
 svg {
-  height: 40px;
+  height: 36px;
 }
 
 svg + .logo-claim {
@@ -42,6 +42,8 @@ span {
   font-weight: 400;
   color: var(--color-font--light);
   text-decoration: none;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 @media (min-width: 600px) {
