@@ -40,7 +40,7 @@ svg + .logo-claim {
 
 span {
   font-weight: 400;
-  color: var(--color-font--light);
+  color: var(--color-font);
   text-decoration: none;
   font-size: 14px;
   line-height: 14px;

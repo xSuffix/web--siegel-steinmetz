@@ -46,6 +46,8 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@nuxtjs/color-mode',
+    '@nuxtjs/svg'
   ],
   /*
   ** Nuxt.js modules
@@ -53,6 +55,7 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    'nuxt-material-design-icons'    
   ],
   /*
   ** Content module configuration

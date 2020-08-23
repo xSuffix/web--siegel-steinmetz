@@ -10,7 +10,11 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.5.0",
-    "nuxt": "^2.14.0"
+    "nuxt": "^2.14.0",
+    "nuxt-material-design-icons": "^1.0.4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxtjs/color-mode": "^1.0.3",
+    "@nuxtjs/svg": "^0.1.11"
+  }
 }

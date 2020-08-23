@@ -21,18 +21,37 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
 
+:root {
   --color-primary: #770019;
-  --color-font--light: #2C4251;
+  --color-link: #1976D2;
+  --color-font: #2C4251;
+  --color-font-muted: #2C4251dd;
+  --color-background: #f7f7f8;
+  --color-background-panel: #fff;
+  --color-navbar: rgba(228, 229, 221, 0.75);
+}
+
+.dark-mode {
+  --color-font: #fff;
+  --color-font-muted: #ffffffdd;
+  --color-background: #202022;
+  --color-background-panel: #282829;
+  --color-navbar: #46464880;
 }
 
 body {
   margin: 0;
-  color: var(--color-font--light);
+  color: var(--color-font);
+}
+
+p {
+  color: var(--color-font-muted)
 }
 
 a {
-  color: #1976D2;
+  color: var(--color-link);
   text-decoration: none;
 }
 

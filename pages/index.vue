@@ -27,7 +27,7 @@
 
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 720 32">
         <path
-          fill="#fff"
+          fill="var(--color-background-panel)"
           d="M0 25.576c89.5 6.3147 201.941 10.18 338.75.8675 220.639-15.0187 381.25 0 381.25 0V0H0v25.576z"
         />
       </svg>
@@ -114,12 +114,12 @@ export default {
 
 <style scoped>
 main {
-  background: #f7f7f8;
+  background: var(--color-background);
 }
 
 .panel {
   background: #d9d9da33;
-  background: #fff;
+  background: var(--color-background-panel);
 }
 
 .welcome {
@@ -135,12 +135,13 @@ main {
 h1 {
   font-size: 1.6rem;
   font-weight: 600;
-  margin: 1rem 0;
+  margin: 1.5rem 0 1rem 0;
 }
 
 h2 {
   font-size: 1.2rem;
   font-weight: 600;
+  margin: 1.25rem 0 1rem 0;
 }
 
 .hero-image {
