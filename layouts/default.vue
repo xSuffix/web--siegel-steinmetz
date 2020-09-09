@@ -1,16 +1,19 @@
 <template>
-  <div>
+  <v-app>
     <Header />
     <Nuxt />
-  </div>
+    <BottomNavigation />
+  </v-app>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
+import BottomNavigation from "@/components/BottomNavigation.vue";
 
 export default {
   components: {
-    Header
+    Header,
+    BottomNavigation
   }
 }
 </script>
@@ -33,13 +36,13 @@ html {
   --color-navbar: rgba(228, 229, 221, 0.75);
 }
 
-.dark-mode {
+/* .dark-mode {
   --color-font: #fff;
   --color-font-muted: #ffffffdd;
   --color-background: #202022;
   --color-background-panel: #282829;
   --color-navbar: #46464880;
-}
+} */
 
 body {
   margin: 0;
@@ -50,8 +53,8 @@ p {
   color: var(--color-font-muted)
 }
 
-a {
-  color: var(--color-link);
+.v-application a {
+  color: var(--v-accent-base);
   text-decoration: none;
 }
 
