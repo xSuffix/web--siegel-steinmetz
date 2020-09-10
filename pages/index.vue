@@ -58,12 +58,12 @@ export default {
           {
             text: "Galerie",
             url: "#",
-            class: "primary",
+            color: "primary"
           },
           {
             text: "Weiterlesen",
             url: "#",
-            class: "",
+            type: "text"
           },
         ],
         image: require("@/assets/grabmallager.jpg"),
@@ -76,12 +76,12 @@ export default {
           {
             text: "Galerie",
             url: "#",
-            class: "primary",
+            color: "primary"
           },
           {
             text: "Weiterlesen",
             url: "#",
-            class: "",
+            type: "text"
           },
         ],
         image: require("@/assets/grabmalreferenzen.jpg"),
@@ -94,12 +94,12 @@ export default {
           {
             text: "Galerie",
             url: "#",
-            class: "primary",
+            color: "primary"
           },
           {
             text: "Weiterlesen",
             url: "#",
-            class: "",
+            type: "text"
           },
         ],
         image: require("@/assets/restaurierungen.jpg"),

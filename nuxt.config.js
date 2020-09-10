@@ -58,7 +58,7 @@ export default {
       themes: {
         light: {
           primary: "#770019",
-          accent: "#1976D2"
+          anchor: "#1976D2"
         }
       }
     }

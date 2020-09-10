@@ -9,7 +9,7 @@
           <p>{{text}}</p>
         </div>
         <div class="actions">
-          <nuxt-link v-for="button in buttons" :key="button.url" :to="button.url" :class="button.class">{{button.text}}</nuxt-link>
+          <nuxt-link v-for="button in buttons" :key="button.url" :to="button.url"><v-btn :text="button.type == 'text'" :color="button.color">{{button.text}}</v-btn></nuxt-link>
         </div>
       </div>
     </div>
@@ -65,26 +65,6 @@ p {
 }
 
 .actions a + a {
-  margin-left: 4px;
-}
-
-a {
-  color: var(--color-primary);
-  font-weight: 600;
-  padding: 8px 16px;
-  display: inline-block;
-  border-radius: 4px;
-  transition: all 0.2s;
-  font-size: 1em;
-  user-select: none;
-}
-
-a:hover {
-  background-color: #d9d9da66;
-}
-
-a.primary {
-  color: #fff;
-  background: var(--color-primary);
+  margin-left: 8px;
 }
 </style>

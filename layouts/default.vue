@@ -53,8 +53,7 @@ p {
   color: var(--color-font-muted)
 }
 
-.v-application a {
-  color: var(--v-accent-base);
+a {
   text-decoration: none;
 }
 

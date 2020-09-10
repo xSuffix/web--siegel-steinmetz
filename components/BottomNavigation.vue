@@ -36,4 +36,8 @@ export default {
 .v-bottom-navigation {
   position: fixed;
 }
+
+.v-bottom-navigation .v-btn {
+  height: inherit;
+}
 </style>
