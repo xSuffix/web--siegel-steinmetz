@@ -43,7 +43,7 @@ span {
   color: var(--color-font);
   text-decoration: none;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 17px;
 }
 
 @media (min-width: 600px) {
