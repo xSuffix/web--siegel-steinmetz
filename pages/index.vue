@@ -2,7 +2,7 @@
   <main>
     <section>
       <div class="panel">
-        <div class="welcome container">
+        <div class="container" id="home">
           <div class="leading">
             <h1>Herzlich Willkommen!</h1>
             <p>
@@ -33,7 +33,7 @@
       </svg>
     </section>
     <section>
-      <div class="offer container">
+      <div class="container" id="offer">
         <h2>Unser Angebot</h2>
         <p>Eine kleine Übersicht unserer bisherigen Leistungen finden Sie hier.</p>
         <card-offer v-bind="grabmallager" />
@@ -61,7 +61,7 @@ export default {
             color: "primary"
           },
           {
-            text: "Weiterlesen",
+            text: "Mehr",
             url: "#",
             type: "text"
           },
@@ -79,7 +79,7 @@ export default {
             color: "primary"
           },
           {
-            text: "Weiterlesen",
+            text: "Mehr",
             url: "#",
             type: "text"
           },
@@ -97,7 +97,7 @@ export default {
             color: "primary"
           },
           {
-            text: "Weiterlesen",
+            text: "Mehr",
             url: "#",
             type: "text"
           },
@@ -122,7 +122,7 @@ main {
   background: var(--color-background-panel);
 }
 
-.welcome {
+#home {
   display: flex;
   flex-direction: column;
 }
@@ -153,7 +153,7 @@ h2 {
 }
 
 @media (max-width: 599px) {
-  .welcome {
+  #home {
     padding: 0;
   }
 
@@ -178,7 +178,7 @@ h2 {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.11);
   }
 
-  .welcome {
+  #home {
     justify-content: space-between;
     padding-top: 96px;
     padding-bottom: 96px;

@@ -44,13 +44,17 @@ html {
   --color-navbar: #46464880;
 } */
 
+.theme--light.v-application {
+  color: var(--v-coal-darken1);
+}
+
 body {
   margin: 0;
   color: var(--color-font);
 }
 
 p {
-  color: var(--color-font-muted)
+  /* color: var(--color-font-muted) */
 }
 
 a {

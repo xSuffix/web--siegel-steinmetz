@@ -58,7 +58,11 @@ export default {
       themes: {
         light: {
           primary: "#770019",
-          anchor: "#1976D2"
+          anchor: "#1976D2",
+          coal: "#2C4251",
+          font: "#2C4251",
+          color: "#2C4251",
+          text: "#2C4251"
         }
       }
     }
