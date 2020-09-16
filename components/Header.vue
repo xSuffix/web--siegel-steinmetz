@@ -4,7 +4,6 @@
       <nuxt-link to="/">
         <Logo />
       </nuxt-link>
-      <theme-picker />
       <ul>
         <nuxt-link
           class="page-link"
@@ -20,13 +19,11 @@
 
 <script>
 import Logo from "@/components/Logo.vue";
-import ThemePicker from "@/components/ThemePicker.vue";
 
 export default {
   name: "SiegelHeaderDefault",
   components: {
-    Logo,
-    ThemePicker
+    Logo
   },
   data() {
     return {

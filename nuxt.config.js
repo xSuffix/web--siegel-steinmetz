@@ -81,8 +81,6 @@ export default {
    ** Nuxt.js dev-modules
    */
   buildModules: [
-    '@nuxtjs/color-mode',
-    '@nuxtjs/svg',
     '@nuxtjs/vuetify'
   ],
   /*
@@ -90,8 +88,7 @@ export default {
    */
   modules: [
     // Doc: https://github.com/nuxt/content
-    '@nuxt/content',
-    'nuxt-material-design-icons'
+    '@nuxt/content'
   ],
   /*
    ** Content module configuration
