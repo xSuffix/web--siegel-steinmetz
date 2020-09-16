@@ -15,6 +15,9 @@ export default {
    */
   head: {
     title: 'Siegel Steinmetz', //process.env.npm_package_name || '',
+    htmlAttrs: {
+      lang: 'de'
+    },
     meta: [{
         charset: 'utf-8'
       },

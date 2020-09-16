@@ -2,7 +2,7 @@
   <div class="card-offer">
     <hr />    
     <div class="card-container">
-      <img :src="image" />
+      <img :src="image" :alt="title" />
       <div class="right">
         <div>
           <h3>{{title}}</h3>

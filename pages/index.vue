@@ -17,6 +17,7 @@
                 <a
                   href="https://www.graef-granit.de/content/produkte"
                   target="_blank"
+                  rel="noopener"
                 >Gräf GmbH</a>
               </b>
             </p>
