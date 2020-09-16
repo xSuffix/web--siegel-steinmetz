@@ -66,7 +66,7 @@ export default {
             type: "text"
           },
         ],
-        image: require("@/assets/grabmallager.jpg"),
+        image: require("@/assets/grabmallager.webp"),
       },
       grabmalreferenzen: {
         title: "Grabmalreferenzen",
@@ -84,7 +84,7 @@ export default {
             type: "text"
           },
         ],
-        image: require("@/assets/grabmalreferenzen.jpg"),
+        image: require("@/assets/grabmalreferenzen.webp"),
       },
       restaurierungen: {
         title: "Restaurierungen",
@@ -102,7 +102,7 @@ export default {
             type: "text"
           },
         ],
-        image: require("@/assets/restaurierungen.jpg"),
+        image: require("@/assets/restaurierungen.webp"),
       },
     };
   },
@@ -145,7 +145,7 @@ h2 {
 }
 
 .hero-image {
-  background: url("../assets/banner.jpg") center 35% no-repeat;
+  background: url("../assets/banner.webp") center 35% no-repeat;
   background-size: cover;
   height: 48vw;
   width: 100%;
