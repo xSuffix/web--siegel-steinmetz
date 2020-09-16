@@ -34,10 +34,15 @@ export default {
         href: '/favicon.ico'
       },
       {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'
+        rel: 'preconnect',
+        href: 'https://cdn.jsdelivr.net'
       }
     ]
+  },
+  webfontloader: {
+    google: {
+      families: ['Roboto:400,500,700&display=swap']
+    }
   },
   /*
    ** Global CSS
@@ -88,7 +93,8 @@ export default {
    */
   modules: [
     // Doc: https://github.com/nuxt/content
-    '@nuxt/content'
+    '@nuxt/content',
+    'nuxt-webfontloader',
   ],
   /*
    ** Content module configuration

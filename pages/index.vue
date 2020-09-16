@@ -134,13 +134,13 @@ main {
 
 h1 {
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 700;
   margin: 1.5rem 0 1rem 0;
 }
 
 h2 {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
   margin: 1.25rem 0 1rem 0;
 }
 

@@ -19,13 +19,6 @@ export default {
 </script>
 
 <style>
-html {
-  font-family: 'Roboto', Arial, sans-serif;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
 :root {
   --color-primary: #770019;
   --color-link: #1976D2;
