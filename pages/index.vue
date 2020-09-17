@@ -31,8 +31,7 @@ export default {
           this.visibleElements.splice(index, 1);
         }
       }
-      // console.log("el: "+element)
-      console.log(Math.min(...this.visibleElements));
+      this.$store.commit("setSection", Math.min(...this.visibleElements));
     },
   },
   data() {
