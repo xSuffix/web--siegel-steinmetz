@@ -32,7 +32,8 @@ export default {
 hr {
   margin: 32px 0;
   border-top: none;
-  border-bottom: 1px solid var(--v-secondary-base);
+  border-bottom: 1px solid;
+  border-color: var(--v-secondary-base);
 }
 
 .card-offer {

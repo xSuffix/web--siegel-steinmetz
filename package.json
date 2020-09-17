@@ -12,7 +12,8 @@
     "@nuxt/content": "^1.9.0",
     "nuxt": "^2.14.5",
     "nuxt-material-design-icons": "^1.0.4",
-    "nuxt-webfontloader": "^1.1.0"
+    "nuxt-webfontloader": "^1.1.0",
+    "vue-observe-visibility": "^0.4.6"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.2"

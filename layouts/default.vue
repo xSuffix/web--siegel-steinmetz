@@ -13,17 +13,17 @@ import BottomNavigation from "@/components/BottomNavigation.vue";
 export default {
   components: {
     Header,
-    BottomNavigation
-  }
-}
+    BottomNavigation,
+  },
+};
 </script>
 
 <style>
 :root {
   --color-primary: #770019;
-  --color-link: #1976D2;
-  --color-font: #2C4251;
-  --color-font-muted: #2C4251dd;
+  --color-link: #1976d2;
+  --color-font: #2c4251;
+  --color-font-muted: #2c4251dd;
   --color-background: #f7f7f8;
   --color-background-panel: #fff;
   --color-navbar: rgba(228, 229, 221, 0.75);
@@ -59,10 +59,33 @@ h1 {
   font-weight: 400;
 }
 
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 1.5rem 0 1rem 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1.25rem 0 1rem 0;
+}
+
 .container {
   max-width: 1248px;
   margin: 0 auto;
   padding: 0 16px;
+}
+
+.panel {
+  background: #d9d9da33;
+  background: var(--color-background-panel);
+}
+
+@media (min-width: 600px) {
+  p {
+    font-size: 1.125rem;
+  }
 }
 
 @media (max-width: 1280px) {

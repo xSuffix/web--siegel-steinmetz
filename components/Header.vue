@@ -64,7 +64,7 @@ nav {
   height: 48px;
   background: var(--color-navbar);
   top: calc(48vw - 48px);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
   padding: 0 16px;
   box-sizing: border-box;
   user-select: none;
