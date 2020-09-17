@@ -31,6 +31,8 @@ export default {
 <style scoped>
 hr {
   margin: 32px 0;
+  border-top: none;
+  border-bottom: 1px solid var(--v-secondary-base);
 }
 
 .card-offer {
@@ -42,13 +44,14 @@ hr {
   font-size: 14px;
 }
 
-.right {
+.right {  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 img {
+  flex: 0 0 32%;
   width: 32%;
   margin-right: 16px;
   border-radius: 4px;

@@ -66,6 +66,8 @@ export default {
       themes: {
         light: {
           primary: "#770019",
+          secondary: "#D9D9DA",
+          tertiary: "#AFB0B0",
           anchor: "#1976D2",
           coal: "#2C4251",
           font: "#2C4251",
