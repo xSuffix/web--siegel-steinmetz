@@ -10,15 +10,15 @@
           }"
     />
     <Offer v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 1)" />
-    <section>
-      <div style="height: 2000px"></div>
-    </section>
+    <Footer />
   </main>
 </template>
 
 <script>
 import Home from "@/sections/Home.vue";
 import Offer from "@/sections/Offer.vue";
+
+import Footer from "@/components/Footer.vue";
 
 export default {
   methods: {
@@ -42,6 +42,7 @@ export default {
   components: {
     Home,
     Offer,
+    Footer
   },
 };
 </script>

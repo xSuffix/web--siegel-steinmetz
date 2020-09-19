@@ -1,6 +1,6 @@
 <template>
   <div class="bottom-navigation-section">
-    <v-bottom-navigation grow :value="selectedSection" color="primary">
+    <v-bottom-navigation grow :value="selectedSection" color="primary" fixed>
       <v-btn @click="$vuetify.goTo('#home')">
         <span>Home</span>
         <v-icon>mdi-home</v-icon>
@@ -39,10 +39,6 @@ export default {
 <style scoped>
 .bottom-navigation-section {
   height: 56px;
-}
-
-.v-bottom-navigation {
-  position: fixed;
 }
 
 .v-bottom-navigation .v-btn {
