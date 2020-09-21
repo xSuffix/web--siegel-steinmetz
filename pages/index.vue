@@ -52,7 +52,7 @@ main {
   background: var(--color-background);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   main {
     padding-top: 112px;
   }

@@ -1,5 +1,5 @@
 <template>
-  <header >
+  <header>
     <nav class="container">
       <nuxt-link to="/">
         <Logo />
@@ -10,8 +10,7 @@
           v-for="link in links"
           :key="link.url"
           :to="link.url"
-          >{{ link.name }}</nuxt-link
-        >
+        >{{ link.name }}</nuxt-link>
       </ul>
     </nav>
   </header>
@@ -23,26 +22,26 @@ import Logo from "@/components/Logo.vue";
 export default {
   name: "SiegelHeaderDefault",
   components: {
-    Logo
+    Logo,
   },
   data() {
     return {
       links: [
         {
           name: "Angebot",
-          url: "/#angebot"
+          url: "/#angebot",
         },
         {
           name: "Über uns",
-          url: "/#uerber-uns"
+          url: "/#uerber-uns",
         },
         {
           name: "Kontakt",
-          url: "/#kontakt"
-        }
-      ]
+          url: "/#kontakt",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -91,9 +90,16 @@ a {
 }
 
 @media (min-width: 600px) {
-header {
-  position: fixed;
+  nav {
+    height: 64px;
+    top: calc(48vw - 64px);
+  }
 }
+
+@media (min-width: 768px) {
+  header {
+    position: fixed;
+  }
 
   nav {
     position: initial;
@@ -107,6 +113,6 @@ header {
 
   ul {
     display: flex;
-  }  
+  }
 }
 </style>

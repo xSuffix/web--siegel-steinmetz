@@ -44,4 +44,10 @@ export default {
 .v-bottom-navigation .v-btn {
   height: inherit;
 }
+
+@media (min-width: 768px) {
+  .bottom-navigation-section {
+    display: none;
+  }
+}
 </style>

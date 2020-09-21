@@ -64,7 +64,7 @@ export default {
   background-position-y: 100%;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 767.98px) {
   #home {
     padding: 0;
   }
@@ -74,7 +74,7 @@ export default {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   h1 {
     margin-top: 0;
   }
@@ -87,14 +87,19 @@ export default {
   }
 
   .leading {
-    width: 50%;
+    margin-right: 16px;
+    max-width: 576px;
+    flex: 1 1;
   }
 
   .hero-image {
+    margin-left: 16px;
     order: 1;
     height: 256px;
+    max-width: 512px;
     border-radius: 4px;
-    max-width: 42%;
+    background-position-x: 33.34%;
+    flex: 1 1;
   }
 }
 </style>

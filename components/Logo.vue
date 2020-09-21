@@ -57,6 +57,17 @@ span {
 
 @media (min-width: 600px) {
   svg {
+    height: 48px;
+  }
+
+  span {
+    font-size: 19px;
+    line-height: 23px;
+  }
+}
+
+@media (min-width: 768px) {
+  svg {
     height: 56px;
   }
 
