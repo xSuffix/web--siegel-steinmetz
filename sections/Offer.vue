@@ -1,20 +1,35 @@
 <template>
-  <section>
-    <div class="container" id="offer">
-      <h2>Unser Angebot</h2>
-      <p>Eine kleine Übersicht unserer bisherigen Leistungen finden Sie hier.</p>
-      <card-offer v-bind="grabmallager" />
-      <card-offer v-bind="grabmalreferenzen" />
-      <card-offer v-bind="restaurierungen" />
+  <section
+    id="offer"
+    ref="offer"
+  >
+    <div class="gray">
+      <div class="content">
+        <div class="container">
+          <h2>Unser Angebot</h2>
+          <p>
+            Eine kleine Übersicht unserer bisherigen Leistungen finden Sie hier.
+          </p>
+          <card-offer v-bind="grabmallager" />
+          <card-offer v-bind="grabmalreferenzen" />
+          <card-offer v-bind="restaurierungen" />
+        </div>
+      </div>
     </div>
+    <Wave color="var(--v-gray-base)" />
   </section>
 </template>
 
 <script>
 import CardOffer from "@/components/CardOffer.vue";
+import Wave from "@/components/Wave.vue";
 
 export default {
-  name: "offer",
+  name: "Offer",
+  components: {
+    CardOffer,
+    Wave,
+  },
   data() {
     return {
       grabmallager: {
@@ -73,11 +88,13 @@ export default {
       },
     };
   },
-  components: {
-    CardOffer,
-  },
 };
 </script>
 
 <style scoped>
+@media (min-width: 600px) {
+  .container {
+    padding-top: 8px;
+  }
+}
 </style>

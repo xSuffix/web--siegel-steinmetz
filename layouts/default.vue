@@ -25,20 +25,11 @@ export default {
   --color-font: #2c4251;
   --color-font-muted: #2c4251dd;
   --color-background: #f7f7f8;
-  --color-background-panel: #fff;
   --color-navbar: rgba(228, 229, 221, 0.75);
 }
 
-/* .dark-mode {
-  --color-font: #fff;
-  --color-font-muted: #ffffffdd;
-  --color-background: #202022;
-  --color-background-panel: #282829;
-  --color-navbar: #46464880;
-} */
-
 .theme--light.v-application {
-  color: var(--v-coal-darken1);
+  color: var(--v-accent-darken1);
 }
 
 body {
@@ -46,17 +37,8 @@ body {
   color: var(--color-font);
 }
 
-p {
-  /* color: var(--color-font-muted) */
-}
-
 a {
   text-decoration: none;
-}
-
-h1 {
-  font-size: 2.25rem;
-  font-weight: 400;
 }
 
 h1 {
@@ -71,15 +53,17 @@ h2 {
   margin: 1.25rem 0 1rem 0;
 }
 
-.container {
+.content {
   max-width: 1248px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0;
+  
 }
 
-.panel {
-  background: #d9d9da33;
-  background: var(--color-background-panel);
+.container {
+  padding: 0px 16px;
+  margin: 0;
+  display: inline-block;
 }
 
 @media (min-width: 600px) {
@@ -89,7 +73,7 @@ h2 {
 }
 
 @media (max-width: 1280px) {
-  .container {
+  .content {
     max-width: 1024px;
   }
 }

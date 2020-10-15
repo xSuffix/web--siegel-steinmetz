@@ -69,10 +69,9 @@ export default {
           secondary: "#D9D9DA",
           tertiary: "#AFB0B0",
           anchor: "#1976D2",
-          coal: "#2C4251",
-          font: "#2C4251",
-          color: "#2C4251",
-          text: "#2C4251"
+          accent: "#2C4251",
+          white: "#fff",
+          gray: "#f7f7f8"
         }
       }
     }
@@ -113,4 +112,4 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {}
-}
+};

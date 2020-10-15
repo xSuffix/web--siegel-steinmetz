@@ -1,16 +1,19 @@
 <template>
-  <section>
-    <div class="panel">
-      <div class="container" id="home" ref="home">
-        <div class="leading">
+  <section
+    id="home"
+    ref="home"
+  >
+    <div class="white">
+      <div class="content">
+        <div class="container">
           <h1>Herzlich Willkommen!</h1>
           <p>
             Wir bieten einen umfassenden Service rund um den Naturstoff Stein:
-            <br />Die Pflege und Restauration von Gebäuden, Sandsteinfassaden,
+            <br>Die Pflege und Restauration von Gebäuden, Sandsteinfassaden,
             Fenstern, Treppen, Geländern, Ornamentent, Denkmälern und
             Grabsteinen.
-            <br />
-            <br />
+            <br>
+            <br>
             <b>
               Zum Grabmalkatalog:
               <a
@@ -21,37 +24,34 @@
             </b>
           </p>
         </div>
-        <div class="hero-image" v-if="$route.name == 'index'" />
+        <div
+          v-if="$route.name == 'index'"
+          class="hero-image"
+        />
       </div>
     </div>
-
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 720 32"
-      style="display: block;"
-    >
-      <path
-        fill="var(--color-background-panel)"
-        d="M0 25.576c89.5 6.3147 201.941 10.18 338.75.8675 220.639-15.0187 381.25 0 381.25 0V0H0v25.576z"
-      />
-    </svg>
+    <Wave color="var(--v-white-base)" />
   </section>
 </template>
 
 <script>
+import Wave from "@/components/Wave.vue";
+
 export default {
-  name: "home",
+  name: "Home",
+  components: {
+    Wave,
+  },
 };
 </script>
 
 <style scoped>
-#home {
+.content {
   display: flex;
   flex-direction: column;
 }
 
-.leading {
+.container {
   order: 2;
   line-height: 1.625;
 }
@@ -64,29 +64,19 @@ export default {
   background-position-y: 100%;
 }
 
-@media (max-width: 767.98px) {
-  #home {
-    padding: 0;
-  }
-
-  .leading {
-    padding: 0 16px;
-  }
-}
-
 @media (min-width: 768px) {
   h1 {
     margin-top: 0;
   }
 
-  #home {
+  .content {
     justify-content: space-between;
     padding-top: 96px;
     padding-bottom: 96px;
     flex-direction: row-reverse;
   }
 
-  .leading {
+  .container {
     margin-right: 16px;
     max-width: 576px;
     flex: 1 1;

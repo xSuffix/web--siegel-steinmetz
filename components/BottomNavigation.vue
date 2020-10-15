@@ -1,6 +1,11 @@
 <template>
   <div class="bottom-navigation-section">
-    <v-bottom-navigation grow :value="selectedSection" color="primary" fixed>
+    <v-bottom-navigation
+      grow
+      :value="selectedSection"
+      color="primary"
+      fixed
+    >
       <v-btn @click="$vuetify.goTo('#home')">
         <span>Home</span>
         <v-icon>mdi-home</v-icon>
@@ -25,8 +30,6 @@
 </template>
 
 <script>
-import Router from "vue-router";
-
 export default {
   computed: {
     selectedSection: function() {

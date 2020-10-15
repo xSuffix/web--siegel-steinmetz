@@ -1,16 +1,16 @@
 <template>
-  <header>
-    <nav class="container">
-      <nuxt-link to="/">
+  <header :class="{ scrolled: scrolled }">
+    <nav class="content container">
+      <a @click="$vuetify.goTo(0)">
         <Logo />
-      </nuxt-link>
+      </a>
       <ul>
-        <nuxt-link
-          class="page-link"
+        <a
           v-for="link in links"
           :key="link.url"
-          :to="link.url"
-        >{{ link.name }}</nuxt-link>
+          class="page-link"
+          @click="$vuetify.goTo(link.url)"
+        >{{ link.label }}</a>
       </ul>
     </nav>
   </header>
@@ -21,27 +21,41 @@ import Logo from "@/components/Logo.vue";
 
 export default {
   name: "SiegelHeaderDefault",
+  
   components: {
     Logo,
   },
   data() {
     return {
+      scrolled: false,
       links: [
         {
-          name: "Angebot",
-          url: "/#angebot",
+          label: "Angebot",
+          url: "#offer",
         },
         {
-          name: "Über uns",
-          url: "/#uerber-uns",
+          label: "Über uns",
+          url: "#about",
         },
         {
-          name: "Kontakt",
-          url: "/#kontakt",
+          label: "Kontakt",
+          url: "#contact",
         },
       ],
     };
   },
+  mounted () {
+    this.handleScroll();
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll () {
+      this.scrolled = window.scrollY > 32;
+    }
+  }
 };
 </script>
 
@@ -52,6 +66,7 @@ header {
   position: relative;
   width: 100%;
   background: #fff;
+  transition: box-shadow 0.2s;
 }
 
 nav {
@@ -64,9 +79,8 @@ nav {
   background: var(--color-navbar);
   top: calc(48vw - 48px);
   backdrop-filter: blur(4px);
-  padding: 0 16px;
-  box-sizing: border-box;
   user-select: none;
+  transition: margin 0.2s;
 }
 
 ul {
@@ -101,11 +115,18 @@ a {
     position: fixed;
   }
 
+  .scrolled {
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+  }
+
+  .scrolled > nav {
+    margin: 8px auto;
+  }
+
   nav {
-    position: initial;
+    position: unset;
     height: 64px;
     margin: 24px auto;
-    box-sizing: content-box;
     background: transparent;
     backdrop-filter: none;
     width: calc(100% - 32px);

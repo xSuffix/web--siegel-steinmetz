@@ -71,4 +71,11 @@ p {
 .actions a + a {
   margin-left: 8px;
 }
+
+@media (min-width: 768px) {
+  img {
+    height: 192px;
+    width: 256px;
+  }
+}
 </style>
