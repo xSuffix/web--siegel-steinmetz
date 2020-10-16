@@ -4,8 +4,8 @@
     ref="offer"
   >
     <div class="gray">
-      <div class="content">
-        <div class="container">
+      <div class="container pv-md-d">
+        <div class="box">
           <h2>Unser Angebot</h2>
           <p>
             Eine kleine Übersicht unserer bisherigen Leistungen finden Sie hier.
@@ -93,7 +93,7 @@ export default {
 
 <style scoped>
 @media (min-width: 600px) {
-  .container {
+  .box {
     padding-top: 8px;
   }
 }

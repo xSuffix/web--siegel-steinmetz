@@ -4,8 +4,8 @@
     ref="home"
   >
     <div class="white">
-      <div class="content">
-        <div class="container">
+      <div class="container pv-lg-d">
+        <div class="box">
           <h1>Herzlich Willkommen!</h1>
           <p>
             Wir bieten einen umfassenden Service rund um den Naturstoff Stein:
@@ -30,7 +30,10 @@
         />
       </div>
     </div>
-    <Wave color="var(--v-white-base)" />
+    <Wave
+      color="var(--v-white-base)"
+      background="var(--v-gray-base)"
+    />
   </section>
 </template>
 
@@ -46,12 +49,12 @@ export default {
 </script>
 
 <style scoped>
-.content {
+.container {
   display: flex;
   flex-direction: column;
 }
 
-.container {
+.box {
   order: 2;
   line-height: 1.625;
 }
@@ -69,14 +72,12 @@ export default {
     margin-top: 0;
   }
 
-  .content {
+  .container {
     justify-content: space-between;
-    padding-top: 96px;
-    padding-bottom: 96px;
     flex-direction: row-reverse;
   }
 
-  .container {
+  .box {
     margin-right: 16px;
     max-width: 576px;
     flex: 1 1;

@@ -4,7 +4,7 @@
     ref="about"
   >
     <div class="white">
-      <div class="content" />
+      <div class="container" />
     </div>
   </section>
 </template>

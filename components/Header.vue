@@ -1,6 +1,6 @@
 <template>
   <header :class="{ scrolled: scrolled }">
-    <nav class="content container">
+    <nav class="container box">
       <a @click="$vuetify.goTo(0)">
         <Logo />
       </a>
@@ -116,7 +116,8 @@ a {
   }
 
   .scrolled {
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.08), 0 1px 10px 0 rgba(0,0,0,0.10), 0 2px 4px -1px rgba(0,0,0,0.12);
+    
   }
 
   .scrolled > nav {

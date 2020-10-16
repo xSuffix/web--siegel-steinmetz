@@ -53,14 +53,13 @@ h2 {
   margin: 1.25rem 0 1rem 0;
 }
 
-.content {
+.container {
   max-width: 1248px;
   margin: 0 auto;
   padding: 0;
-  
 }
 
-.container {
+.box {
   padding: 0px 16px;
   margin: 0;
   display: inline-block;
@@ -72,8 +71,30 @@ h2 {
   }
 }
 
+@media (min-width: 768px) {
+  .pv-lg-d {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .pv-md-d {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .pv-sm-d {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .pv-xs-d {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
 @media (max-width: 1280px) {
-  .content {
+  .container {
     max-width: 1024px;
   }
 }
