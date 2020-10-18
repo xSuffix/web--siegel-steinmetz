@@ -6,7 +6,7 @@
     <div class="white">
       <div class="container pv-lg-d">
         <div class="box">
-          <h1>Herzlich Willkommen!</h1>
+          <h1>Herzlich Willkommen!!</h1>
           <p>
             Wir bieten einen umfassenden Service rund um den Naturstoff Stein:
             <br>Die Pflege und Restauration von Gebäuden, Sandsteinfassaden,
