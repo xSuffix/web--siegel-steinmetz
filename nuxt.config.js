@@ -87,16 +87,29 @@ export default {
    ** Nuxt.js dev-modules
    */
   buildModules: [
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://github.com/nuxt/content
-    '@nuxt/content',
+    // '@nuxt/content',
+    '@nuxt/components',
+    '@nuxtjs/apollo',
     'nuxt-webfontloader'
   ],
+  env: {
+    strapiBaseUri: process.env.API_URL || "http://localhost:1337"
+    
+  },
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.BACKEND_URL || "http://localhost:1337/graphql"
+      }
+    }
+  },
   /*
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration

@@ -21,15 +21,8 @@
 </template>
 
 <script>
-import CardOffer from "@/components/CardOffer.vue";
-import Wave from "@/components/Wave.vue";
-
 export default {
   name: "Offer",
-  components: {
-    CardOffer,
-    Wave,
-  },
   data() {
     return {
       grabmallager: {

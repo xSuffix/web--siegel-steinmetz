@@ -5,29 +5,32 @@
         callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 0),
         intersection: {
           root: this.$refs.home,
-          rootMargin: '-128px'
-        }
+          rootMargin: '-128px',
+        },
       }"
     />
-    <Offer v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 1)" />
+    <Offer
+      v-observe-visibility="
+        (isVisible, entry) => visibilityChanged(isVisible, entry, 1)
+      "
+    />
     <About />
     <Footer />
   </main>
 </template>
 
 <script>
-import Home from "@/sections/Home.vue";
-import Offer from "@/sections/Offer.vue";
-import About from "@/sections/About.vue";
-
-import Footer from "@/components/Footer.vue";
+import gql from "graphql-tag";
+import textsQuery from "@/apollo/queries/text/texts.gql";
 
 export default {
-  components: {
-    Home,
-    Offer,
-    About,
-    Footer
+  async asyncData({ app }) {
+    const { data } = await app.apolloProvider.defaultClient.query({
+      query: textsQuery,
+    });
+    return {
+      texts: data.texts,
+    };
   },
   data() {
     return {
@@ -46,7 +49,7 @@ export default {
       }
       this.$store.commit("setSection", Math.min(...this.visibleElements));
     },
-  },
+  }
 };
 </script>
 

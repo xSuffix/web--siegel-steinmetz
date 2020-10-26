@@ -5,25 +5,12 @@
   >
     <div class="white">
       <div class="container pv-lg-d">
-        <div class="box">
-          <h1>Herzlich Willkommen!!</h1>
-          <p>
-            Wir bieten einen umfassenden Service rund um den Naturstoff Stein:
-            <br>Die Pflege und Restauration von Gebäuden, Sandsteinfassaden,
-            Fenstern, Treppen, Geländern, Ornamentent, Denkmälern und
-            Grabsteinen.
-            <br>
-            <br>
-            <b>
-              Zum Grabmalkatalog:
-              <a
-                href="https://www.graef-granit.de/content/produkte"
-                target="_blank"
-                rel="noopener"
-              >Gräf GmbH</a>
-            </b>
-          </p>
-        </div>
+        <div
+          class="box"
+          v-html="
+            new showdown.Converter().makeHtml(this.$parent.texts[0].content)
+          "
+        />
         <div
           v-if="$route.name == 'index'"
           class="hero-image"
@@ -38,12 +25,12 @@
 </template>
 
 <script>
-import Wave from "@/components/Wave.vue";
-
 export default {
   name: "Home",
-  components: {
-    Wave,
+  data() {
+    return {
+      showdown: require("showdown"),
+    };
   },
 };
 </script>
@@ -60,7 +47,7 @@ export default {
 }
 
 .hero-image {
-  background: url("../assets/banner.webp") center 35% no-repeat;
+  background: url("../../assets/banner.webp") center 35% no-repeat;
   background-size: cover;
   height: 48vw;
   width: 100%;
