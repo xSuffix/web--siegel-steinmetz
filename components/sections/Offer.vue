@@ -10,9 +10,11 @@
           <p>
             Eine kleine Übersicht unserer bisherigen Leistungen finden Sie hier.
           </p>
-          <card-offer v-bind="grabmallager" />
-          <card-offer v-bind="grabmalreferenzen" />
-          <card-offer v-bind="restaurierungen" />
+          <div class="offers">
+            <offer-card v-bind="grabmallager" />
+            <offer-card v-bind="grabmalreferenzen" />
+            <offer-card v-bind="restaurierungen" />
+          </div>
         </div>
       </div>
     </div>
@@ -88,6 +90,14 @@ export default {
 @media (min-width: 600px) {
   .box {
     padding-top: 8px;
+  }
+}
+
+@media (min-width: 992px) {
+  .offers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
   }
 }
 </style>
