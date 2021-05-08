@@ -1,62 +1,89 @@
 <template>
-  <main>
-    <Home
-      v-observe-visibility="{
-        callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 0),
-        intersection: {
-          root: this.$refs.home,
-          rootMargin: '-128px',
-        },
-      }"
-    />
-    <Offer
-      v-observe-visibility="
-        (isVisible, entry) => visibilityChanged(isVisible, entry, 1)
-      "
-    />
-    <About />
-    <Footer />
-  </main>
+  <v-row justify="center" align="center">
+    <v-col cols="12" sm="8" md="6">
+      <div class="text-center">
+        <logo />
+        <vuetify-logo />
+      </div>
+      <v-card>
+        <v-card-title class="headline">
+          Welcome to the Vuetify + Nuxt.js template
+        </v-card-title>
+        <v-card-text>
+          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
+          <p>
+            For more information on Vuetify, check out the <a
+              href="https://vuetifyjs.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              documentation
+            </a>.
+          </p>
+          <p>
+            If you have questions, please join the official <a
+              href="https://chat.vuetifyjs.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="chat"
+            >
+              discord
+            </a>.
+          </p>
+          <p>
+            Find a bug? Report it on the github <a
+              href="https://github.com/vuetifyjs/vuetify/issues"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="contribute"
+            >
+              issue board
+            </a>.
+          </p>
+          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
+          <div class="text-xs-right">
+            <em><small>&mdash; John Leider</small></em>
+          </div>
+          <hr class="my-3">
+          <a
+            href="https://nuxtjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Nuxt Documentation
+          </a>
+          <br>
+          <a
+            href="https://github.com/nuxt/nuxt.js"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Nuxt GitHub
+          </a>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer />
+          <v-btn
+            color="primary"
+            nuxt
+            to="/inspire"
+          >
+            Continue
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
-import gql from "graphql-tag";
-import textsQuery from "@/apollo/queries/text/texts.gql";
+import Logo from '~/components/Logo.vue'
+import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
-  async asyncData({ app }) {
-    const { data } = await app.apolloProvider.defaultClient.query({
-      query: textsQuery,
-    });
-    return {
-      texts: data.texts,
-    };
-  },
-  data() {
-    return {
-      visibleElements: [],
-    };
-  },
-  methods: {
-    visibilityChanged(isVisible, entry, element) {
-      if (isVisible) {
-        this.visibleElements.push(element);
-      } else {
-        let index = this.visibleElements.indexOf(element);
-        if (index >= 0) {
-          this.visibleElements.splice(index, 1);
-        }
-      }
-      this.$store.commit("setSection", Math.min(...this.visibleElements));
-    },
-  }
-};
-</script>
-
-<style scoped>
-@media (min-width: 768px) {
-  main {
-    padding-top: 112px;
+  components: {
+    Logo,
+    VuetifyLogo
   }
 }
-</style>
+</script>
