@@ -9,25 +9,39 @@ export default {
     titleTemplate: '%s - www.siegel-steinmetz.de',
     title: 'www.siegel-steinmetz.de',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'de'
     },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: ''
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    }]
+  },
+
+  webfontloader: {
+    google: {
+      families: ['Roboto:400,500,700&display=swap']
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
+  css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -42,6 +56,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    'nuxt-webfontloader'
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -51,8 +66,17 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
+        light: {
+          main1: "#770019",
+          main2: "#D9D9DA",
+          main3: "#AFB0B0",
+          accent1: "#1976D2",
+          accent2: "#2C4251",
+          bgr1: "#fff",
+          bgr2: "#f7f7f8"
+        },
         dark: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,
@@ -68,9 +92,12 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    babel:{
+    babel: {
       plugins: [
-        ['@babel/plugin-proposal-private-methods', { loose: true }]
+        // '@/plugins/vue-observe-visibility.js',
+        ['@babel/plugin-proposal-private-methods', {
+          loose: true
+        }]
       ]
     }
   }
