@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="p-8">
     <Header />
     <Nuxt />
     <BottomNavigation />
@@ -16,4 +16,54 @@ export default {};
   --color-font-muted: #2c4251dd;
   --color-navbar: #e4e5ddbf;
 }
+
+.v-application--wrap {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  color: var(--color-font);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 1.5rem 0 1rem 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1.25rem 0 1rem 0;
+}
+
+/* .container {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0;
+} */
+
+.box {
+  padding: 0px 16px;
+  margin: 0;
+  display: inline-block;
+}
+
+@media (min-width: 600px) {
+  p {
+    font-size: 1.125rem;
+  }
+}
+
+/* @media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+} */
+
 </style>

@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - www.siegel-steinmetz.de',
-    title: 'www.siegel-steinmetz.de',
+    titleTemplate: '%s - Bernd Siegel Steingestaltung',
+    title: 'Home',
     htmlAttrs: {
       lang: 'de'
     },
@@ -21,7 +21,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: ''
+        content: 'Sie finden unsere Firma Bernd Siegel Steingestaltung in Neudenau.'
       }
     ],
     link: [{

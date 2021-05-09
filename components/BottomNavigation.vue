@@ -17,12 +17,11 @@ export default {
     };
   },
   async fetch() {
-    this.links = await this.$content("sections")
+    this.links = await this.$content("blocks")
       .only(["title", "slug", "bottomNav", "icon"])
       .where({ bottomNav: { $gt: 0 } })
       .sortBy("bottomNav")
       .fetch();
-    console.log(this.links);
   },
   computed: {
     selectedSection: function () {
