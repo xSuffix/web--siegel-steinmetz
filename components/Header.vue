@@ -1,93 +1,49 @@
 <template>
-  <header :class="{ scrolled: scrolled }">
-    <nav class="container box">
-      <a @click="$vuetify.goTo(0)">
-        <Logo />
-      </a>
-      <ul>
+<v-container pa-0>
+  <v-app-bar flat class="mt-md-16 mb-md-16">
+    
+      <v-app-bar-title><Logo /></v-app-bar-title>
+      <v-spacer />
+      <nav class="d-none d-md-flex">
         <a
           v-for="link in links"
-          :key="link.url"
-          class="page-link"
-          @click="$vuetify.goTo(link.url)"
-        >{{ link.label }}</a>
-      </ul>
-    </nav>
-  </header>
+          :key="link.slug"
+          @click="$vuetify.goTo(link.slug)"
+          >{{ link.title }}</a
+        >
+      </nav>
+    
+  </v-app-bar>
+  </v-container>
 </template>
 
 <script>
-import Logo from "@/components/Logo.vue";
-
 export default {
-  name: "SiegelHeaderDefault",
-  
-  components: {
-    Logo,
-  },
   data() {
     return {
-      scrolled: false,
-      links: [
-        {
-          label: "Angebot",
-          url: "#offer",
-        },
-        {
-          label: "Über uns",
-          url: "#about",
-        },
-        {
-          label: "Kontakt",
-          url: "#contact",
-        },
-      ],
+      links: [],
     };
   },
-  mounted () {
-    this.handleScroll();
-    window.addEventListener('scroll', this.handleScroll);
+  async fetch() {
+    this.links = await this.$content("blocks")
+      .only(["title", "slug", "nav"])
+      .where({ nav: { $gt: 0 } })
+      .sortBy("nav")
+      .fetch();
   },
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
-  methods: {
-    handleScroll () {
-      this.scrolled = window.scrollY > 32;
-    }
-  }
 };
 </script>
 
-<style scoped>
-header {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  background: #fff;
-  transition: box-shadow 0.2s;
-}
-
-nav {
-  width: 100%;
+<style>
+.v-toolbar {
   position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 48px;
-  background: var(--color-navbar);
-  top: calc(48vw - 48px);
+  z-index: 8;
+  top: calc(48vw - 56px);
   backdrop-filter: blur(4px);
-  user-select: none;
-  transition: margin 0.2s;
+  background-color: var(--color-navbar) !important;
 }
 
-ul {
-  display: none;
-}
-
-.page-link {
+nav > a {
   color: var(--color-font);
   font-weight: 500;
   padding: 16px 24px;
@@ -95,46 +51,15 @@ ul {
   border-radius: 4px;
 }
 
-.page-link:hover {
+nav > a:hover {
   color: var(--color-primary);
 }
 
-a {
-  text-decoration: none;
-}
-
-@media (min-width: 600px) {
-  nav {
-    height: 64px;
-    top: calc(48vw - 64px);
-  }
-}
-
-@media (min-width: 768px) {
-  header {
-    position: fixed;
-  }
-
-  .scrolled {
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.08), 0 1px 10px 0 rgba(0,0,0,0.10), 0 2px 4px -1px rgba(0,0,0,0.12);
-    
-  }
-
-  .scrolled > nav {
-    margin: 8px auto;
-  }
-
-  nav {
-    position: unset;
-    height: 64px;
-    margin: 24px auto;
-    background: transparent;
-    backdrop-filter: none;
-    width: calc(100% - 32px);
-  }
-
-  ul {
-    display: flex;
+@media (min-width: 960px) {
+  .v-toolbar {
+    position: relative;
+    top: 0;
+    background-color: var(--color-bgr1) !important;
   }
 }
 </style>

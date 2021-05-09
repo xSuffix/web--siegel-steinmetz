@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="p-8">
     <Header />
     <Nuxt />
     <BottomNavigation />
@@ -7,29 +7,18 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import BottomNavigation from "@/components/BottomNavigation.vue";
-
-export default {
-  components: {
-    Header,
-    BottomNavigation,
-  },
-};
+export default {};
 </script>
 
 <style>
 :root {
-  --color-primary: #770019;
-  --color-link: #1976d2;
   --color-font: #2c4251;
   --color-font-muted: #2c4251dd;
-  --color-background: #f7f7f8;
-  --color-navbar: rgba(228, 229, 221, 0.75);
+  --color-navbar: #e4e5ddbf;
 }
 
-.theme--light.v-application {
-  color: var(--v-accent-darken1);
+.v-application--wrap {
+  overflow-x: hidden;
 }
 
 body {
@@ -53,11 +42,11 @@ h2 {
   margin: 1.25rem 0 1rem 0;
 }
 
-.container {
+/* .container {
   max-width: 1248px;
   margin: 0 auto;
   padding: 0;
-}
+} */
 
 .box {
   padding: 0px 16px;
@@ -71,31 +60,10 @@ h2 {
   }
 }
 
-@media (min-width: 768px) {
-  .pv-lg-d {
-    padding-top: 96px;
-    padding-bottom: 96px;
-  }
-
-  .pv-md-d {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-
-  .pv-sm-d {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-
-  .pv-xs-d {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-}
-
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
   .container {
     max-width: 1024px;
   }
-}
+} */
+
 </style>

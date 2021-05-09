@@ -9,21 +9,16 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxt/components": "^1.1.1",
-    "@nuxtjs/apollo": "^4.0.1-rc.4",
-    "eslint-plugin-prettier": "^3.1.4",
-    "graphql-tag": "^2.11.0",
-    "netlify-cms-app": "^2.14.30",
-    "nuxt": "^2.14.5",
-    "nuxt-material-design-icons": "^1.0.4",
+    "@babel/core": "^7.14.0",
+    "@nuxt/components": "^2.1.8",
+    "@nuxt/content": "^1.14.0",
+    "core-js": "^3.9.1",
+    "nuxt": "^2.15.3",
     "nuxt-webfontloader": "^1.1.0",
-    "showdown": "^1.9.1",
-    "vue-observe-visibility": "^0.4.6"
+    "vue-loader": "^15.9.6",
+    "vue-observe-visibility": "^1.0.0"
   },
   "devDependencies": {
-    "@nuxtjs/vuetify": "^1.11.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.11.0",
-    "eslint-plugin-vue": "^7.0.1"
+    "@nuxtjs/vuetify": "^1.11.3"
   }
 }

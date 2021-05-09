@@ -1,29 +1,9 @@
 <template>
-  <div class="bottom-navigation-section">
-    <v-bottom-navigation
-      grow
-      :value="selectedSection"
-      color="primary"
-      fixed
-    >
-      <v-btn @click="$vuetify.goTo('#home')">
-        <span>Home</span>
-        <v-icon>mdi-home</v-icon>
-      </v-btn>
-
-      <v-btn @click="$vuetify.goTo('#offer')">
-        <span>Angebot</span>
-        <v-icon>mdi-book-open-variant</v-icon>
-      </v-btn>
-
-      <v-btn @click="$vuetify.goTo('#about')">
-        <span>Über uns</span>
-        <v-icon>mdi-account</v-icon>
-      </v-btn>
-
-      <v-btn @click="$vuetify.goTo('#contact')">
-        <span>Kontakt</span>
-        <v-icon>mdi-phone</v-icon>
+  <div class="bottom-navigation-section d-md-none">
+    <v-bottom-navigation grow :value="selectedSection" color="main1" fixed>
+      <v-btn v-for="link in links" :key="link.slug" @click="$vuetify.goTo(link.slug)">
+        <span>{{ link.title }}</span>
+        <v-icon>{{ link.icon }}</v-icon>
       </v-btn>
     </v-bottom-navigation>
   </div>
@@ -31,26 +11,29 @@
 
 <script>
 export default {
+  data() {
+    return {
+      links: [],
+    };
+  },
+  async fetch() {
+    this.links = await this.$content("blocks")
+      .only(["title", "slug", "bottomNav", "icon"])
+      .where({ bottomNav: { $gt: 0 } })
+      .sortBy("bottomNav")
+      .fetch();
+  },
   computed: {
-    selectedSection: function() {
+    selectedSection: function () {
       return this.$store.state.selectedSection;
-    }
+    },
   },
 };
 </script>
 
 <style scoped>
+/* Because bottom-navigation is fixed and would overlap the page */
 .bottom-navigation-section {
   height: 56px;
-}
-
-.v-bottom-navigation .v-btn {
-  height: inherit;
-}
-
-@media (min-width: 768px) {
-  .bottom-navigation-section {
-    display: none;
-  }
 }
 </style>
