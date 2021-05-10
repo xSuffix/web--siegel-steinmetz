@@ -62,6 +62,7 @@ h2 {
     width: 100%;
     border-radius: 4px;
     margin: 0 0 0 auto;
+    display: block;
   }
 }
 

@@ -97,16 +97,8 @@ let config = {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    babel: {
-      plugins: [
-        ['@babel/plugin-proposal-private-methods', {
-          loose: true
-        }]
-      ]
-    }
-  },
-
+  build: {},
+  
   // nuxt/image: https://image.nuxtjs.org/api/options/
   image: {
     staticFilename: '.[publicPath]/images/[name]-[hash][ext]'
