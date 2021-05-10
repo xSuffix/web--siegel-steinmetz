@@ -60,10 +60,21 @@ h2 {
   }
 }
 
-/* @media (max-width: 1280px) {
-  .container {
-    max-width: 1024px;
+.banner {
+  height: 48vw;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 960px) {
+  .banner {
+    max-width: 512px;
+    max-height: 256px;
+    height: calc(8vw + 128px);
+    width: 100%;
+    border-radius: 4px;
+    margin: 0 0 0 auto;
   }
-} */
+}
 
 </style>

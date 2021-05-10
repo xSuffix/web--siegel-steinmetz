@@ -1,6 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 
-export default {
+let config = {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -41,7 +41,9 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    // '@/plugins/vue-observe-visibility.js',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -50,6 +52,10 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    ['@nuxt/image', {
+      provider: 'static',
+      dir: "assets/images",
+    }],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -94,11 +100,22 @@ export default {
   build: {
     babel: {
       plugins: [
-        // '@/plugins/vue-observe-visibility.js',
         ['@babel/plugin-proposal-private-methods', {
           loose: true
         }]
       ]
     }
+  },
+
+  // nuxt/image: https://image.nuxtjs.org/api/options/
+  image: {
+    staticFilename: '.[publicPath]/images/[name]-[hash][ext]'
   }
+};
+
+if (process.env.NODE_ENV === 'production') {
+  config.plugins.push('@/plugins/global.js')
 }
+
+
+export default config
