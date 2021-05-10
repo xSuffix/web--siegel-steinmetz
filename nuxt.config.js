@@ -4,10 +4,16 @@ let config = {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  router: {
-   base: '/www.siegel-steinmetz.de/'
-  },
- 
+  // static: {
+  //   prefix: '/www.siegel-steinmetz.de/'
+  // },
+
+  // router: {
+  //   base: process.env.NODE_ENV === 'production' ?
+  //     '/www.siegel-steinmetz.de/' :
+  //     '/'
+  // },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - Bernd Siegel Steingestaltung',
@@ -102,7 +108,7 @@ let config = {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-  
+
   // nuxt/image: https://image.nuxtjs.org/api/options/
   image: {
     staticFilename: '.[publicPath]/images/[name]-[hash][ext]'
