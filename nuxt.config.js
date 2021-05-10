@@ -4,6 +4,10 @@ let config = {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  router: {
+   base: '/www.siegel-steinmetz.de/'
+  },
+ 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - Bernd Siegel Steingestaltung',
@@ -108,6 +112,5 @@ let config = {
 if (process.env.NODE_ENV === 'production') {
   config.plugins.push('@/plugins/global.js')
 }
-
 
 export default config
