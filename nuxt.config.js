@@ -98,7 +98,11 @@ let config = {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-  
+
+  router: {
+    base: '/dist/'
+  },
+
   // nuxt/image: https://image.nuxtjs.org/api/options/
   image: {
     staticFilename: '.[publicPath]/images/[name]-[hash][ext]'
