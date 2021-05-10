@@ -42,18 +42,6 @@ h2 {
   margin: 1.25rem 0 1rem 0;
 }
 
-/* .container {
-  max-width: 1248px;
-  margin: 0 auto;
-  padding: 0;
-} */
-
-.box {
-  padding: 0px 16px;
-  margin: 0;
-  display: inline-block;
-}
-
 @media (min-width: 600px) {
   p {
     font-size: 1.125rem;
