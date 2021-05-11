@@ -41,6 +41,7 @@ export default {
   top: calc(48vw - 56px);
   backdrop-filter: blur(4px);
   background-color: var(--color-navbar) !important;
+  transition: none;
 }
 
 nav > a {

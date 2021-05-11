@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "types": ["...", "vuetify"],
     "baseUrl": ".",
     "paths": {
       "~/*": ["./*"],
