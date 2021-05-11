@@ -1,19 +1,18 @@
 <template>
-<v-container pa-0>
-  <v-app-bar flat dense class="mt-md-16 mb-md-16">
-    
+  <v-container pa-0>
+    <v-app-bar flat dense class="mt-md-16 mb-md-16">
       <v-app-bar-title><Logo /></v-app-bar-title>
       <v-spacer />
       <nav class="d-none d-md-flex">
         <a
+          class="font--text font-weight-bold mx-4 pa-2"
           v-for="link in links"
           :key="link.slug"
           @click="$vuetify.goTo(link.slug)"
           >{{ link.title }}</a
         >
       </nav>
-    
-  </v-app-bar>
+    </v-app-bar>
   </v-container>
 </template>
 
@@ -34,7 +33,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .header {
   height: 48px !important;
 }
@@ -45,18 +44,23 @@ export default {
   top: calc(48vw - 48px);
   backdrop-filter: blur(4px);
   background-color: var(--color-navbar) !important;
+  transition: none;
 }
 
-nav > a {
-  color: var(--color-font);
-  font-weight: 500;
-  padding: 16px 24px;
-  align-self: center;
-  border-radius: 4px;
+a:hover {
+  color: var(--color-primary) !important;
 }
 
-nav > a:hover {
-  color: var(--color-primary);
+.v-toolbar > div {
+    height: 56px !important;
+    background-color:red !important;
+  }
+
+@media (min-width: 600px) {
+  .v-toolbar {
+    height: 56px !important;
+    top: calc(48vw - 56px);
+  }
 }
 
 @media (min-width: 960px) {
@@ -64,11 +68,12 @@ nav > a:hover {
     position: relative;
     top: 0;
     background-color: var(--color-bgr1) !important;
-    height: 56px !important;
   }
+}
+</style>
 
-  .v-toolbar__content {
-    min-height: 56px !important;
-  }
+<style>
+.v-toolbar__content {
+  height: 100% !important;
 }
 </style>

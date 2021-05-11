@@ -1,6 +1,6 @@
 <!--The 'Bernd Siegel Steingestaltung' Claim-->
 <template>
-  <div class="logo">
+  <a class="logo" @click="$vuetify.goTo('#app')">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1572 1600" fill="none">
       <path fill="#D9DADA" d="M0 343h1252v1257H0z" />
       <path fill="#B1B2B3" d="M1252 971.5V343h304v1257h-304V971.5z" />
@@ -12,13 +12,13 @@
     <div class="logo-claim">
       <div>
         <span>Bernd</span>
-        <span class="main1--text">Siegel</span>
+        <span class="primary--text">Siegel</span>
       </div>
       <div>
         <span>Steingestaltung</span>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script>

@@ -12,22 +12,28 @@ export default {};
 
 <style>
 :root {
+  --color-primary: #770019;
   --color-font: #2c4251;
   --color-font-muted: #2c4251dd;
+  --color-link: #1976D2;
   --color-navbar: #e4e5ddbf;
-}
-
-.v-application--wrap {
-  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+}
+
+#__layout .v-application {
   color: var(--color-font);
 }
 
-a {
+#__layout .v-application a {
+  color: var(--color-link);
   text-decoration: none;
+}
+
+.v-application--wrap {
+  overflow-x: hidden;
 }
 
 h1 {
@@ -52,6 +58,7 @@ h2 {
   height: 48vw;
   width: 100%;
   object-fit: cover;
+  object-position: center bottom;
 }
 
 @media (min-width: 960px) {
@@ -59,10 +66,10 @@ h2 {
     max-width: 512px;
     max-height: 256px;
     height: calc(8vw + 128px);
-    width: 100%;
     border-radius: 4px;
     margin: 0 0 0 auto;
     display: block;
+    object-position: center center;
   }
 }
 

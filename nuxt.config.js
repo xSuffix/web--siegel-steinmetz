@@ -85,13 +85,12 @@ let config = {
       dark: false,
       themes: {
         light: {
-          main1: "#770019",
-          main2: "#D9D9DA",
-          main3: "#AFB0B0",
-          accent1: "#1976D2",
-          accent2: "#2C4251",
-          bgr1: "#fff",
-          bgr2: "#f7f7f8"
+          primary: "#770019",
+          link: "#1976D2",
+          accent: "#2C4251",
+          background: "#fff",
+          panel: "#f7f7f8",
+          font: "#2C4251"
         },
         dark: {
           primary: colors.blue.darken2,
