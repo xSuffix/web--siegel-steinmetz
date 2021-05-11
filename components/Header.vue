@@ -1,6 +1,6 @@
 <template>
 <v-container pa-0>
-  <v-app-bar flat class="mt-md-16 mb-md-16">
+  <v-app-bar flat dense class="mt-md-16 mb-md-16">
     
       <v-app-bar-title><Logo /></v-app-bar-title>
       <v-spacer />
@@ -35,13 +35,16 @@ export default {
 </script>
 
 <style>
+.header {
+  height: 48px !important;
+}
+
 .v-toolbar {
   position: absolute;
   z-index: 8;
-  top: calc(48vw - 56px);
+  top: calc(48vw - 48px);
   backdrop-filter: blur(4px);
   background-color: var(--color-navbar) !important;
-  transition: none;
 }
 
 nav > a {
@@ -61,6 +64,11 @@ nav > a:hover {
     position: relative;
     top: 0;
     background-color: var(--color-bgr1) !important;
+    height: 56px !important;
+  }
+
+  .v-toolbar__content {
+    min-height: 56px !important;
   }
 }
 </style>

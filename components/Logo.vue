@@ -61,8 +61,8 @@ span {
   }
 
   span {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 17px;
+    line-height: 20px;
   }
 }
 
