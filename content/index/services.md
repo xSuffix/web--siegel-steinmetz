@@ -1,9 +1,12 @@
 ---
-title: "Angebot"
+title: "Services"
 description: "Our services"
-slug: "#offer"
+slug: "services"
+link: "#services"
+orderPage: 20
 nav: 20
 bottomNav: 20
 icon: "mdi-book-open-variant"
 ---
-hello offer
+
+Unsere Services

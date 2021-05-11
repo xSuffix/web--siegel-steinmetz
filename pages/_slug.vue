@@ -1,5 +1,4 @@
 <template>
-<!-- This is a duplicate of _slug.vue because nuxt/images seems to be unable to resolve assets from _slug -->
   <main>
     <section v-for="doc in docs" :key="doc.slug" :id="doc.slug">
       <nuxt-content :document="doc" />

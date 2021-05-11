@@ -110,7 +110,7 @@ let config = {
 
   // nuxt/image: https://image.nuxtjs.org/api/options/
   image: {
-    staticFilename: '.[publicPath]/images/[name]-[hash][ext]'
+    staticFilename: '[publicPath]/images/[name]-[hash][ext]'
   }
 };
 

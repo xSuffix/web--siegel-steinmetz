@@ -1,9 +1,9 @@
 <template>
   <div class="bottom-navigation-section d-md-none">
     <v-bottom-navigation grow :value="selectedSection" color="primary" fixed>
-      <v-btn v-for="link in links" :key="link.slug" @click="$vuetify.goTo(link.slug)" text>
-        <span>{{ link.title }}</span>
-        <v-icon>{{ link.icon }}</v-icon>
+      <v-btn v-for="doc in docs" :key="doc.slug" @click="$vuetify.goTo(doc.link)" text>
+        <span>{{ doc.title }}</span>
+        <v-icon>{{ doc.icon }}</v-icon>
       </v-btn>
     </v-bottom-navigation>
   </div>
@@ -13,12 +13,12 @@
 export default {
   data() {
     return {
-      links: [],
+      docs: [],
     };
   },
   async fetch() {
-    this.links = await this.$content("blocks")
-      .only(["title", "slug", "bottomNav", "icon"])
+    this.docs = await this.$content({ deep: true })
+      .only(["title", "slug", "link", "bottomNav", "icon"])
       .where({ bottomNav: { $gt: 0 } })
       .sortBy("bottomNav")
       .fetch();

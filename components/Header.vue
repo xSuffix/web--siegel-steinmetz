@@ -6,10 +6,10 @@
       <nav class="d-none d-md-flex">
         <a
           class="font--text font-weight-bold mx-4 pa-2"
-          v-for="link in links"
-          :key="link.slug"
-          @click="$vuetify.goTo(link.slug)"
-          >{{ link.title }}</a
+          v-for="doc in docs"
+          :key="doc.slug"
+          @click="$vuetify.goTo(doc.link)"
+          >{{ doc.title }}</a
         >
       </nav>
     </v-app-bar>
@@ -20,12 +20,12 @@
 export default {
   data() {
     return {
-      links: [],
+      docs: [],
     };
   },
   async fetch() {
-    this.links = await this.$content("blocks")
-      .only(["title", "slug", "nav"])
+    this.docs = await this.$content({ deep: true })
+      .only(["title", "slug", "link", "nav"])
       .where({ nav: { $gt: 0 } })
       .sortBy("nav")
       .fetch();
@@ -52,9 +52,9 @@ a:hover {
 }
 
 .v-toolbar > div {
-    height: 56px !important;
-    background-color:red !important;
-  }
+  height: 56px !important;
+  background-color: red !important;
+}
 
 @media (min-width: 600px) {
   .v-toolbar {

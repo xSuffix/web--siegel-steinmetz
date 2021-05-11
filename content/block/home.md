@@ -1,7 +1,9 @@
 ---
 title: "Home"
 description: "Introduction to the home page"
-slug: "#app"
+slug: "home"
+link: "#app"
+orderPage: 10
 bottomNav: 10
 icon: "mdi-home"
 ---

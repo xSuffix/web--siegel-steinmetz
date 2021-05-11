@@ -18,7 +18,7 @@ export default {
     }
   },
   async fetch() {
-    this.doc = await this.$content("blocks", "home").fetch();
+    this.doc = await this.$content("blocks", this.content).fetch();
   }
 };
 </script>

@@ -13,6 +13,7 @@ export default {};
 <style>
 :root {
   --color-primary: #770019;
+  --color-font-strong: #182229;
   --color-font: #2c4251;
   --color-font-muted: #2c4251dd;
   --color-link: #1976D2;
@@ -40,6 +41,7 @@ h1 {
   font-size: 1.6rem;
   font-weight: 700;
   margin: 1.5rem 0 1rem 0;
+  color: var(--color-font-strong)
 }
 
 h2 {
