@@ -4,13 +4,9 @@ let config = {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  // static: {
-  //   prefix: '/www.siegel-steinmetz.de/'
-  // },
-
   // router: {
   //   base: process.env.NODE_ENV === 'production' ?
-  //     '/www.siegel-steinmetz.de/' :
+  //     '/' :
   //     '/'
   // },
 
@@ -80,7 +76,6 @@ let config = {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: false,
       themes: {

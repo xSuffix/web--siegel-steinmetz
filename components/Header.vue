@@ -5,7 +5,7 @@
       <v-spacer />
       <nav class="d-none d-md-flex">
         <a
-          class="font--text font-weight-bold mx-4 pa-2"
+          class="font--text font-weight-medium mx-4 pa-2"
           v-for="doc in docs"
           :key="doc.slug"
           @click="$vuetify.goTo(doc.link)"
