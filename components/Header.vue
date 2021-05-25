@@ -1,6 +1,6 @@
 <template>
   <v-container pa-0>
-    <v-app-bar flat dense class="mt-md-16 mb-md-16">
+    <v-app-bar flat dense class="my-md-12">
       <v-app-bar-title><Logo /></v-app-bar-title>
       <v-spacer />
       <nav class="d-none d-md-flex">

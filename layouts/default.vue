@@ -18,6 +18,8 @@ export default {};
   --color-font-muted: #2c4251dd;
   --color-link: #1976D2;
   --color-navbar: #e4e5ddbf;
+  --color-bgr: #fff;
+  --color-bgr2: #f7f7f8;
 }
 
 body {
@@ -45,9 +47,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin: 1.25rem 0 1rem 0;
+  margin: 1.25rem 0 0.75rem 0;
 }
 
 @media (min-width: 600px) {
@@ -73,6 +75,10 @@ h2 {
     display: block;
     object-position: center center;
   }
+}
+
+#services {
+  background: var(--color-bgr2);
 }
 
 </style>
