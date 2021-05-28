@@ -1,6 +1,5 @@
 ---
 title: "Home"
-description: "Introduction to the home page"
 slug: "home"
 link: "#app"
 orderPage: 10
@@ -8,16 +7,14 @@ bottomNav: 10
 icon: "mdi-home"
 ---
 
-<!-- Hero image & Layout -->
-<v-container pa-0 py-md-8><v-row no-gutter style="align-items: center">
-<v-col cols="12" md="6" order-md="2" style="margin-bottom: -12px;"><nuxt-img src="banner.webp" alt="Hero Image" class="banner"></nuxt-img></v-col>
-<v-col cols="12" md="6" order-md="1" style="padding: 0 24px;">
+<HeroSection img="{src: 'banner.webp'}">
 
 # Herzlich willkommen!
 
-Wir bieten einen umfassenden Service rund um den Naturstoff Stein:
-Die Pflege und Restaurierung von Gebäuden, Sandsteinfassaden, Fenstern, Treppen, Geländern, Ornamenten, Denkmälern und Grabsteinen.
+Wir bieten einen umfassenden Service rund um den Naturstoff Stein: Die Pflege und Restaurierung von Gebäuden, Sandsteinfassaden, Fenstern, Treppen, Geländern, Ornamenten, Denkmälern und Grabsteinen.
 
 **Zum Grabmalkatalog: [Gräf GmbH](https://www.graef-granit.de/content/produkte)**
-</v-col>
-</v-row></v-container>
+
+</HeroSection>
+
+<Wave color="var(--color-bgr)" background="var(--color-bgr2)"></Wave>

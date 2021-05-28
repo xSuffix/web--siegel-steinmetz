@@ -1,10 +1,10 @@
 <template>
   <nav class="d-none d-md-flex">
-    <a
-      class="font--text font-weight-medium mx-4 pa-2"
+    <a      
       v-for="doc in docs"
       :key="doc.slug"
       @click="$vuetify.goTo(doc.link)"
+      class="font--text font-weight-medium mx-4 pa-2"
       >{{ doc.title }}</a
     >
   </nav>

@@ -9,7 +9,6 @@ bottomNav: 20
 icon: "mdi-book-open-variant"
 ---
 
-<Wave color="var(--color-bgr)" background="var(--color-bgr2)"></Wave>
 <div class="container pt-md-8">
 
 ## Unser Angebot

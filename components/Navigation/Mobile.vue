@@ -1,7 +1,12 @@
 <template>
   <div class="bottom-navigation-section d-md-none">
     <v-bottom-navigation grow :value="selectedSection" color="primary" fixed>
-      <v-btn v-for="doc in docs" :key="doc.slug" @click="$vuetify.goTo(doc.link)" text>
+      <v-btn
+        v-for="doc in docs"
+        :key="doc.slug"
+        @click="$vuetify.goTo(doc.link)"
+        text
+      >
         <span>{{ doc.title }}</span>
         <v-icon>{{ doc.icon }}</v-icon>
       </v-btn>
