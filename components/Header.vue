@@ -3,35 +3,10 @@
     <v-app-bar flat dense class="my-md-12">
       <v-app-bar-title><Logo /></v-app-bar-title>
       <v-spacer />
-      <nav class="d-none d-md-flex">
-        <a
-          class="font--text font-weight-medium mx-4 pa-2"
-          v-for="doc in docs"
-          :key="doc.slug"
-          @click="$vuetify.goTo(doc.link)"
-          >{{ doc.title }}</a
-        >
-      </nav>
+      <NavigationDesktop />
     </v-app-bar>
   </v-container>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      docs: [],
-    };
-  },
-  async fetch() {
-    this.docs = await this.$content({ deep: true })
-      .only(["title", "slug", "link", "nav"])
-      .where({ nav: { $gt: 0 } })
-      .sortBy("nav")
-      .fetch();
-  },
-};
-</script>
 
 <style scoped>
 .header {
@@ -45,10 +20,6 @@ export default {
   backdrop-filter: blur(4px);
   background-color: var(--color-navbar) !important;
   transition: none;
-}
-
-a:hover {
-  color: var(--color-primary) !important;
 }
 
 .v-toolbar > div {

@@ -2,7 +2,7 @@
   <v-app class="p-8">
     <Header />
     <Nuxt />
-    <BottomNavigation />
+    <NavigationMobile />
   </v-app>
 </template>
 
