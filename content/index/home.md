@@ -3,7 +3,7 @@ title: "Home"
 slug: "home"
 link: "#app"
 orderPage: 10
-bottomNav: 10
+orderBottomNav: 10
 icon: "mdi-home"
 ---
 

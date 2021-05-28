@@ -1,11 +1,10 @@
 ---
 title: "Kontakt"
-description: "Contact us"
 slug: "contact"
 link: "#contact"
 orderPage: 40
-nav: 40
-bottomNav: 40
+orderDesktopNav: 40
+orderBottomNav: 40
 icon: "mdi-phone"
 ---
-hello contact
+

@@ -23,9 +23,9 @@ export default {
   },
   async fetch() {
     this.docs = await this.$content({ deep: true })
-      .only(["title", "slug", "link", "bottomNav", "icon"])
-      .where({ bottomNav: { $gt: 0 } })
-      .sortBy("bottomNav")
+      .only(["title", "slug", "link", "orderBottomNav", "icon"])
+      .where({ orderBottomNav: { $gt: 0 } })
+      .sortBy("orderBottomNav")
       .fetch();
   },
   computed: {
