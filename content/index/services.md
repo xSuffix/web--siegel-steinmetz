@@ -14,7 +14,7 @@ icon: "mdi-book-open-variant"
 
 Eine kleine Übersicht über unsere bisherigen Leistungen finden Sie hier.
 
-<Service :image="{src: 'restaurierungen.webp'}" :buttons="[{title: 'Galerie', color: 'primary'}]" :divider="true">
+<Service :image="{src: 'restaurierungen.webp'}" :buttons="[{title: 'Galerie', color: 'primary'}, {title: 'Details', text: true}]" :divider="true">
 
 ### Restaurierungen
 
