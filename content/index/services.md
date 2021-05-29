@@ -14,11 +14,19 @@ icon: "mdi-book-open-variant"
 
 Eine kleine Übersicht über unsere bisherigen Leistungen finden Sie hier.
 
-<Service :img="{src: 'restaurierungen.webp'}">
+<Service :image="{src: 'restaurierungen.webp'}" :buttons="[{title: 'Galerie', color: 'primary'}]" :divider="true">
 
 ### Restaurierungen
 
 Unsere Firma hat als Schwerpunkt ihrer Arbeit die kompetente und sachgemäße Restaurierung, Aufbereitung und Pflege von alten Kirchen und Gebäuden sowie Grabmälern, Denkmälern und Bildhauerarbeiten im Programm.
+
+</Service>
+
+<Service :image="{src: 'grabmale.webp'}" :buttons="[{title: 'Galerie', color: 'primary'}]" :divider="true">
+
+### Grabmale
+
+Wir gestalten gemeinsam mit Ihnen eine ganz persönliche Erinnerung an Ihren verstorbenen Verwandten, ein individuelles Grabmal. Sie können aus einer Vielfalt an Materialien, Inschriften und Ornamenten wählen. Handwerkliche Grabmale werden direkt in Neudenau hergestellt. Industriell hergestellte Steine, beziehen wir von unserem Zulieferer.
 
 </Service>
 

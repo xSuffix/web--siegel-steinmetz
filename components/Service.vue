@@ -1,19 +1,17 @@
 <template>
-  <v-container pb-md-8>
+  <v-container pa-0 pb-md-8>
+    <v-divider v-if="divider == true" class="my-6" />
     <v-row>
-      <v-col cols="4">
-        <nuxt-img v-bind="img" style="width: 100%"></nuxt-img>
+      <v-col cols="4" class="d-flex align-center">
+        <nuxt-img v-bind="image" class="rounded" style="width: 100%" />
       </v-col>
-      <v-col
-        :class="{
-          'd-flex': true,
-          'flex-column': true,
-          'justify-space-between': true,
-        }"
-        ><div>
+      <v-col class="d-flex flex-column justify-space-between">
+        <div>
           <slot />
         </div>
-        <v-btn>Galerie</v-btn>
+        <v-btn v-for="button in buttons" :key="button.title" v-bind="button">
+          {{ button.title }}
+        </v-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -22,7 +20,9 @@
 <script>
 export default {
   props: {
-    img: Object,
+    image: Object,
+    buttons: Array,
+    divider: Boolean,
   },
 };
 </script>
