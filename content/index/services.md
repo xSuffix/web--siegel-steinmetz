@@ -14,7 +14,7 @@ icon: "mdi-book-open-variant"
 
 Eine kleine Übersicht über unsere bisherigen Leistungen finden Sie hier.
 
-<Service :image="{src: 'restaurierungen.webp'}" :buttons="[{title: 'Weiterlesen', color: 'primary'}, {title: 'Galerie', color: 'primary', text: true}]" :divider="true">
+<Service :image="{src: 'restaurierungen.webp'}" :buttons="[{title: 'Galerie', color: 'primary'}, {title: 'Weiterlesen', color: 'primary', text: true}]" :divider="true">
 
 ### Restaurierungen
 
@@ -22,7 +22,7 @@ Unsere Firma hat als Schwerpunkt ihrer Arbeit die kompetente und sachgemäße Re
 
 </Service>
 
-<Service :image="{src: 'grabmale.webp'}" :buttons="[{title: 'Galerie', color: 'primary'}]" :divider="true">
+<Service :image="{src: 'grabmale.webp'}" :buttons="[{title: 'Galerie', color: 'primary'}, {title: 'Weiterlesen', color: 'primary', text: true}]" :divider="true">
 
 ### Grabmale
 

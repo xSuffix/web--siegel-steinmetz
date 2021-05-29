@@ -3,7 +3,7 @@
     <v-divider v-if="divider == true" class="my-6" />
     <v-row>
       <v-col>
-        <div style="font-size: 15px">
+        <div style="font-size: 0.9375rem">
           <nuxt-img
             v-bind="image"
             class="rounded"
@@ -17,14 +17,6 @@
           </v-btn>
         </div>
       </v-col>
-      <!-- <v-col class="d-flex flex-column justify-space-between">
-        <div>
-          <slot />
-        </div>
-        <v-btn v-for="button in buttons" :key="button.title" v-bind="button">
-          {{ button.title }}
-        </v-btn>
-      </v-col> -->
     </v-row>
   </v-container>
 </template>
@@ -41,8 +33,7 @@ export default {
 
 <style scoped>
 button {
-  text-transform: initial;
-  font-weight: 600;
+  /* text-transform: initial; */
 }
 
 button + button {
