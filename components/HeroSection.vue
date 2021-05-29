@@ -3,22 +3,22 @@
     <v-row no-gutter class="align-center">
       <v-col cols="12" md="6" order-md="2" class="mb-n3">
         <nuxt-img
-          src="banner.webp"
           v-bind="img"
           class="banner"
           alt="Hero Image"
-        ></nuxt-img
-      ></v-col>
+        ></nuxt-img>
+      </v-col>
       <v-col cols="12" md="6" order-md="1" class="px-6 py-0">
         <slot />
-      </v-col> </v-row
-  ></v-container>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
 export default {
   props: {
-    img: Array,
+    img: Object,
   },
 };
 </script>

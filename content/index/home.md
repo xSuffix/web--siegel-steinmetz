@@ -7,7 +7,7 @@ orderBottomNav: 10
 icon: "mdi-home"
 ---
 
-<HeroSection img="{src: 'banner.webp'}">
+<HeroSection :img="{src: 'banner.webp'}">
 
 # Herzlich willkommen!
 
