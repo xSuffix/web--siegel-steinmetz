@@ -13,7 +13,7 @@
     "@babel/core": "^7.14.3",
     "@nuxt/components": "^2.1.8",
     "@nuxt/content": "^1.14.0",
-    "@nuxt/image": "^0.4.13",
+    "@nuxt/image": "^0.4.14",
     "core-js": "^3.13.0",
     "nuxt": "^2.15.6",
     "nuxt-webfontloader": "^1.1.0",
