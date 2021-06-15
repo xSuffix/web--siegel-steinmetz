@@ -10,7 +10,7 @@
     "deploy": "gh-pages -d dist -t true"
   },
   "dependencies": {
-    "@babel/core": "^7.14.3",
+    "@babel/core": "^7.14.6",
     "@nuxt/components": "^2.1.8",
     "@nuxt/content": "^1.14.0",
     "@nuxt/image": "^0.4.13",
